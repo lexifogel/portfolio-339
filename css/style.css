@@ -1,0 +1,41 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #56DBFB;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  line-height: 1;
+  text-align: center;
+}
+
+/* h2{
+
+} */
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  display: inline;
+
+}
+
+nav{
+  background-color: #ddd; 
+  text-align: left;   
+}
+
+
+
+footer{
+  background-color: white;
+  color: navy;
+  text-align: center;
+}
