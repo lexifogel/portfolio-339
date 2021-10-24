@@ -2,40 +2,126 @@ html{
     scroll-behavior: smooth;
 }
 
+header {
+    position: sticky;
+}
+
 body{
-  background-color: #56DBFB;
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
+    overflow: scroll;
+    background-color: #eefbfb;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    padding: 50px 20px ;
 }
 
 h1{
-  line-height: 1;
-  text-align: center;
+    font-size: 64px;
+    color: black;
+    -webkit-text-fill-color: #1458D8; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #FFF;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* h2{
-
-} */
-
-nav ul{
-  list-style-type: none;
+h2 {
+    font-size: 32px;
+    color: #1458D8;
+    transition: font-size 2s ease;
+    font-weight: normal;
+    text-align: center;
+    margin: 1em;
 }
+
+p {
+    font-size: 24px;
+    color: #1458D8;
+    margin: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*:focus {
+    border: 2px solid;
+}
+
 
 nav li{
   display: inline;
+  margin: .5em;
 
 }
 
 nav{
-  background-color: #ddd; 
-  text-align: left;   
+  color: #1458D8;
+  background-color: #eefbfb; 
+  text-align: left;  
+  margin: 20px; 
+}
+
+nav a{
+    color: #1458D8;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+.selfie {
+    display: block;
+    margin: auto;
 }
 
 
+#contact {
+    color: #fff;
 
-footer{
-  background-color: white;
-  color: navy;
-  text-align: center;
+}
+
+#contact li{
+    display: inline;
+}
+
+
+footer {
+    position: static;
+    bottom: 0px;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+
+    background: #eefbfb;
+    text-align: center;
+
+    height: fit-content;
+}
+
+footer p {
+    color: #1458D8;
+    background-color: #eefbfb;
+    font-size: 15px;
+}
+
+/* Contact page */
+
+label{
+    display: none;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 30px;
+    margin: 0 auto;
+    width: 75%;
+    position: relative;
+    align-content: center;
 }

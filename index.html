@@ -8,26 +8,52 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="../images/LF.png"/>
     <title>Lexi Fogel</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
 
     <header>
         <nav>
-            <ul>
+            <ul class = "nav_links">
                 <li><a href = "index.html">About</a></li>
                 <li><a href = "../resume 10:8:21.pdf">Resume</a></li>   <!-- make sure this works ***-->
                 <li><a href = "projects.html">Work</a></li>
                 <!-- <li><a href="#work">Work</a></li> -->
-                <li><a href="#contact">Contact</a></li>
+                <li><a href = "contact.html">Contact</a></li>
             </ul>
+            <!-- <div class="dropdown">
+                <button class="dropbtn">Lexi Fogel ▾</button>
+                <div class="dropdown-content">
+                    <a href="index.html">About</a>
+                    <a href = "../resume 10:8:21.pdf">Resume</a>
+                    <a href = "projects.html">Work</a>
+                    <a href = "contact.html">Contact</a>
+                </div> -->
         </nav>
     </header>
 
     <main>
 
-        <h1>Hi, I'm Lexi!</h1>
-            <p>I am a current junior studying UX Design in the University of Michigan's School of Information. I'm passionate about designing technology that is accessible to everyone with the intent to improve our everyday lives.</p>
+        <div class="container">
+            <h1>Hi, I'm Lexi!</h1>
+            <img class="selfie" src="images/lex-kate-selfie.jpg" width=30% alt="selfie" /> <br>
+            <h2>I am a current junior studying UX Design at the University of Michigan's School of Information. I'm passionate about designing technology that is accessible to everyone with the intent to improve our everyday lives.</h2>
+            <p>When I'm not studying, you'll likely find me walking around campus or exploring by bike!</p>
+        </div>
+
+        <div class="container">
+            <img src="../images/arb-river.jpg" alt="river" />
+            <img src="../images/farmy-market.jpg" alt="market" />
+            <img src="../images/home-bike.jpg" alt="bike" />
+            <img src="../images/swimmin-dogs.jpg" alt="dogs" />
+        </div>
+
+           
 
         
         <!-- <div id="work">
@@ -35,18 +61,22 @@
                 <p></p>
         </div> -->
 
-        <div id="contact">
-            <h2>Contact</h2>
-                <a href = "mailto: lfogel@umich.edu">Email</a>
-                <a href = "http://www.linkedin.com/in/lexi-fogel">LinkedIn</a>
 
-        </div>
+        <!-- <div id="contact">
+            <h2>Contact</h2> 
+            <ul>
+                <li><a href = "mailto: lfogel@umich.edu">Email</a></li>
+                <li><a href = "http://www.linkedin.com/in/lexi-fogel">LinkedIn</a></li> 
+            </ul>
+        </div> -->
+
+        <br><br><br>
 
     </main>
 
  
     <footer>
-		<p>Lexi Fogel &copy; 2021</p>
+        <p>Lexi Fogel &copy; 2021</p>
 	</footer>
 
   </body>
