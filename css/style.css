@@ -35,17 +35,34 @@ h2 {
     color: #1458D8;
     transition: font-size 2s ease;
     font-weight: normal;
-    text-align: center;
-    margin: 1em;
+}
+
+h3 {
+    font-size: 24px;
+    color: #0041b9;
+    font-weight: bolder;
+
+}
+
+h4 {
+    font-size: 16px;
+    color: #0041b9;
+    font-weight: bold;
 }
 
 p {
-    font-size: 24px;
-    color: #1458D8;
+    color: #000080;
     margin: 20px;
-    text-align: center;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.15;
 }
+
+ul, li {
+    line-height: 1.25;
+    margin-left: 20px;
+        color: #000080;
+}
+
 
 *:focus {
     border: 2px solid;
@@ -55,6 +72,7 @@ p {
 nav li{
   display: inline;
   margin: .5em;
+  position: sticky;
 
 }
 
@@ -109,9 +127,19 @@ footer p {
     font-size: 15px;
 }
 
+/* About page */
+.hobbies {
+    text-align: left;
+}
+
+.hobbies li {
+    display: inline;
+
+}
+
 /* Contact page */
 
-label{
+label {
     display: none;
 }
 
@@ -119,9 +147,19 @@ label{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    padding: 30px;
     margin: 0 auto;
-    width: 75%;
     position: relative;
     align-content: center;
 }
+
+textarea {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.connect {
+    margin-left: 20px;
+    line-height: 1.5;
+}
+
+
+
