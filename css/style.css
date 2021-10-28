@@ -2,85 +2,182 @@ html{
     scroll-behavior: smooth;
 }
 
-header {
-    position: sticky;
-}
-
 body{
-    overflow: scroll;
-    background-color: #eefbfb;
+    background-color: #3aafa9;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
+.background-color {
+    background: linear-gradient(
+        to right,
+        #0041b9 0%,
+        #0041b9 50%,
+        #3aafa9 50%,
+        #3aafa9 100%);
+}
+
+/* body > header {
+    position: sticky;
+    top: 0px;    
+} */
+
 .container {
-    padding: 50px 20px ;
+    padding: 1em 1em;
+}
+
+.container img {
+    stroke: #0041b9;
+    stroke-width: .1em;
 }
 
 h1{
-    font-size: 64px;
-    color: black;
-    -webkit-text-fill-color: #1458D8; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #FFF;
+    font-size: 62px;
+    color: #eefbfb; /* Will override color (regardless of order) */
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0041b9; */
     text-align: center;
-    padding: 20px;
+    margin-bottom: .5em;
     font-family: 'Montserrat', sans-serif;
+
+    text-shadow: .03em .05em #0041b9;
 }
 
 h2 {
     font-size: 32px;
-    color: #1458D8;
+    color: #eefbfb;
     transition: font-size 2s ease;
     font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 h3 {
     font-size: 24px;
-    color: #0041b9;
-    font-weight: bolder;
+    color: #eefbfb;
+    line-height: 1.15;
+    margin: .5em;
+}
 
+.container h3 {
+    display: block;
+    text-align: right;
 }
 
 h4 {
     font-size: 16px;
     color: #0041b9;
     font-weight: bold;
+    line-height: 1.15;
+    margin: .5em;
 }
 
 p {
-    color: #000080;
-    margin: 20px;
+    color: #eefbfb;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.15;
+    margin: .5em;
 }
 
 ul, li {
-    line-height: 1.25;
-    margin-left: 20px;
-        color: #000080;
+    line-height: 1.35;
+    color: #eefbfb;
+    margin-left: 1em;
 }
-
 
 *:focus {
     border: 2px solid;
 }
 
-
-nav li{
-  display: inline;
-  margin: .5em;
-  position: sticky;
-
+a:visited {
+    text-decoration: none;
 }
 
+/* Nav container */
 nav{
-  color: #1458D8;
-  background-color: #eefbfb; 
-  text-align: left;  
-  margin: 20px; 
+    display: flex;
+    justify-content: flex-end;
+    color: #eefbfb;
+    margin: .5em;
+    background: transparent;
+}
+  
+/* Links inside the navbar */
+nav a {
+    font-size: 16px;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    display: block;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #eefbfb;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* button.dropbtn {
+    font-size: 1.5em;
+} */
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+left: 0;
+right: 0;
+border-top-left-radius: .5em;
+border-top-right-radius: .5em;
+border-bottom-left-radius: .5em;
+border-bottom-right-radius: .5em;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {       
+    color: #1458D8;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
+
+ /* corners round on hovered link? */
+ /* also -- how to make link rows shorter? */
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .dropdown-content:active {
+    border: 1px solid;
+}  */
+/*ndicate the current page WITHIN the links in the navigation ?? */
+
+nav li{
+    display: inline;
 }
 
 nav a{
@@ -88,23 +185,80 @@ nav a{
     text-decoration: none;
 }
 
-nav a:hover {
+/* sidebar */
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+  }
+  
+
+
+
+a:hover {
     font-weight: bold;
+}
+
+.sticky_name {
+    text-align: left;
 }
 
 .selfie {
     display: block;
     margin: auto;
-}
-
-
-#contact {
-    color: #fff;
-
-}
-
-#contact li{
-    display: inline;
 }
 
 
@@ -114,28 +268,88 @@ footer {
     width: 100%;
     margin: 0 0 0 0;
     padding: 0;
-
-    background: #eefbfb;
     text-align: center;
-
-    height: fit-content;
+    background: transparent;
 }
 
 footer p {
-    color: #1458D8;
-    background-color: #eefbfb;
+    color: #eefbfb;
     font-size: 15px;
 }
 
+
 /* About page */
+
 .hobbies {
     text-align: left;
 }
 
 .hobbies li {
     display: inline;
-
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(5, 1fr); /* ? */
+    row-gap: .1em;
+    margin: 1em;
+}
+
+#pic1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+    overflow: hidden;
+}
+
+#pic2 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    overflow: hidden;
+}
+
+#pic3 {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+    overflow: hidden;
+}
+
+#pic4 {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+    overflow: hidden;
+}
+
+#pic5 {
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+    overflow: hidden;
+}
+
+#pic6 {
+    grid-column: 3 / span 1;
+    grid-row: 6 / span 1;
+    overflow: hidden;
+}
+
+#pic7 { /* long pic */
+    grid-column: 1 / span 2;
+    grid-row: 7 / span 1;
+    overflow: hidden;
+}
+
+#pic8 {
+    grid-column: 3 / span 1;
+    grid-row: 8 / span 1;
+    overflow: hidden;
+}
+
+#pic9 {
+    grid-column: 1 / -1;
+    grid-row: 9 / span 1;
+    overflow: hidden;
+}
+
 
 /* Contact page */
 
@@ -144,15 +358,18 @@ label {
 }
 
 .form {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    display: flex;
     margin: 0 auto;
-    position: relative;
-    align-content: center;
+    border-radius: 4px;
+    align-items: center;
+    flex-basis: 1em;
+    flex-grow: 4;
+    margin-left: 10px;
+    
+
 }
 
-textarea {
+#name, #email, textarea, #submit {
     font-family: 'Montserrat', sans-serif;
 }
 

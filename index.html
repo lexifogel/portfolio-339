@@ -13,57 +13,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
 
+    <script src="https://use.fontawesome.com/f9c76c7132.js"></script>
+
   </head>
 
-  <body>
-
+  <body class="background-color">
     <header>
-        <nav>
-            <ul class = "nav_links">
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "about.html">About</a></li>
-                <li><a href = "work.html">Work</a></li>
-                <li><a href = "contact.html">Contact</a></li>
-            </ul>
-            <!-- <div class="dropdown">
-                <button class="dropbtn">Lexi Fogel ▾</button>
+        <nav class="background-color">
+
+            <!-- <div class="dropdown" tabindex="1">
+                <button class="dropbtn">≡
+                    <i class="fa fa-caret-down"></i>
+                </button>
                 <div class="dropdown-content">
-                    <a href="index.html">About</a>
-                    <a href = "../resume 10:8:21.pdf">Resume</a>
-                    <a href = "projects.html">Work</a>
+                    <a href = "index.html">Home</a>
+                    <a href = "about.html">About</a>
+                    <a href = "work.html">Work</a>
                     <a href = "contact.html">Contact</a>
-                </div> -->
+                </div>
+            </div> -->
+
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href = "index.html">Home</a>
+                <a href = "about.html">About</a>
+                <a href = "work.html">Work</a>
+                <a href = "contact.html">Contact</a>
+              </div>
+              
+              <div id="main">
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
+              </div>
+
         </nav>
-    </header>
+    </header>       
 
     <main>
 
         <div class="container">
             <h1>Hi, I'm Lexi!</h1>
             <img class="selfie" src="images/lex-kate-selfie.jpg" width=30% alt="selfie" /> <br>
-            <h2>I am a current junior studying UX Design at the University of Michigan's School of Information. </h2>
+            <h2>I am a current junior studying Data Science with a concentration in UX Design at the University of Michigan's School of Information. </h2>
             <br><br>
             <h3>I'm passionate about designing technology that is accessible to everyone with the intent to improve our everyday lives.</h3>
         </div>
 
+        <!-- "analysis can be used to make informed decisions, bring people together, and advance society" -->
 
 
-           
-
-        
-        <!-- <div id="work">
-            <h2>Work</h2>
-                <p></p>
-        </div> -->
-
-
-        <!-- <div id="contact">
-            <h2>Contact</h2> 
-            <ul>
-                <li><a href = "mailto: lfogel@umich.edu">Email</a></li>
-                <li><a href = "http://www.linkedin.com/in/lexi-fogel">LinkedIn</a></li> 
-            </ul>
-        </div> -->
 
         <br><br><br>
 
@@ -73,6 +70,8 @@
     <footer>
         <p>Lexi Fogel &copy; 2021</p>
 	</footer>
+
+    <script src="javascript.js"></script>
 
   </body>
   
