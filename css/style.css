@@ -94,6 +94,10 @@ a:visited {
     color: #FFF; /* change visited color */
 }
 
+a.connect:visited {
+    color: #FFF; /* change visited color ?? */
+}
+
 /* Nav container */
 nav{
     display: flex;
