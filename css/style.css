@@ -3,7 +3,8 @@ html{
 }
 
 body{
-    background-color: #5da2d5;
+    background-color: #215583;
+    /* #5da2d5; */
     /* font-size: 18px; */
     font-family: 'Montserrat', sans-serif;
     margin: 3em;
@@ -13,10 +14,10 @@ body{
 .background-color {
     background: linear-gradient(
         to right,
-        #5da2d5 0%,
+        #215583 0%,
+        #215583 50%,
         #5da2d5 50%,
-        #a8d0e6 50%,
-        #a8d0e6 100%);
+        #5da2d5 100%);
     /* text-align: center; */
 }
 
