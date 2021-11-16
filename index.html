@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="../images/LF.png"/>
+    <link rel="shortcut icon" type="image/png" href="images/LF.png"/>
     <script src="https://use.fontawesome.com/f9c76c7132.js"></script>
     <title>Lexi Fogel</title>
     
@@ -30,13 +30,26 @@
                 <button class="openbtn" onclick="openNav()">&#9776;</button>
               </div>
         </nav>
+
+
     </header>       
 
     <main>
 
         <div class="container">
             <h1>Hi, I'm Lexi!</h1>
-            <img class="selfie" src="images/lex-kate-selfie.jpg" width=30% alt="selfie" /> <br><br>
+
+            <div class="flipcard" ontouchstart="this.classList.toggle('hover')">
+              <div class="flipcard-inner">
+                <div class="flipcard-front">
+                  <img class="selfie" src="images/lex-kate-selfie.jpg" alt="selfie" />
+                </div>
+                <div class="flipcard-back">
+                  <p>Welcome to my portfolio!</p>
+                </div>
+              </div>
+            </div>
+
             <h2>I am a current junior studying Data Science with a concentration in UX Design at the University of Michigan's School of Information. </h2>
             <br><br>
             <h3>I'm passionate about designing technology that is accessible to everyone with the intent to improve our everyday lives.</h3>
