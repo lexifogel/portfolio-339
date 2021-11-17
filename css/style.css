@@ -133,6 +133,7 @@ a.connect:visited {
 }
 /* end flipcard */ 
 
+/* Nav */
 /* Nav container */
 nav {
     display: flex;
@@ -145,7 +146,7 @@ nav {
 /* Links inside the navbar */
 nav a {
     font-size: 16px;
-    color: white;
+    color: eefbfb;
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -158,30 +159,29 @@ nav a {
     color: #5da2d5;
     text-decoration: none;
 }
+/* end nav */
 
 
 /* Sidebar */
 
 /* current page */
-nav a.current::after {
-    /* text-decoration: underline; */
-    content: " ✩";
+nav a.current { 
+    text-transform: uppercase;
+    /* content: " ✩";  ---- needs  :after  ! */
 }
-
 
 /* The sidebar menu */
 .sidebar {
-    height: 100%; /* 100% Full-height */
+    height: 100%;
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     right: 0; /* this is what put the sidebar on the right!! */
-    background-color: #eefbfb; /* Black*/
+    background-color: #eefbfb;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-    align-items: right; /* ??? doesnt work--want sidebar on right!*/
 }
   
   /* The sidebar links */
@@ -194,14 +194,6 @@ nav a.current::after {
     transition: 0.3s;
   }
   
-  /* When you mouse over the navigation links, change their color */
-  .sidebar a:hover {
-    color: #5da2d5;
-  }
-  
-  .sidebar a:current {  /* trying to indicate current page!--bad selector */
-    text-decoration: underline;
-  }
   /* Position and style the close button (top right corner) */
   .sidebar .closebtn {
     position: absolute;
@@ -229,12 +221,10 @@ img {
     object-fit: inherit;
 }
 
-/* hovered links */
 a:hover {
     font-weight: bold;
 }
 
-/* footy boy */
 footer {
     background-color: transparent;
     position: static; /* CENTER ! */
@@ -244,6 +234,10 @@ footer {
     font-size: .75em;
 }
 
+.container h2{
+    margin-top: .5em;
+    margin-bottom: 2em;
+}
 
 /* About page */
 
@@ -318,61 +312,13 @@ footer {
     margin-bottom: 1em;
 }
 
-
-/* skills grid */
-.skills-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(11, 2em);
-}
-
 #title1 {
-    grid-row: 1 / span 1;
-}
-
-#l1-1 {
-    grid-row: 2 / span 1;
-}
-
-#l1-2 {
-    grid-row: 3 / span 1;
-}
-
-#l1-3 {
-    grid-row: 4 / span 1;
-}
-
-#l1-4 {
-    grid-row: 5 / span 1;
-}
-
-#l1-5 {
-    grid-row: 6 / span 1;
+    align-self: end;
 }
 
 #title2 {
-    grid-row: 7 / span 1;
-    /* margin-top: .5em; */
+    margin-top: 1em;
 }
-/* why is this one at the bottom??? **** */
-
-#l2-1 {
-    grid-row: 8 / span 1;
-}
-
-#l2-2 {
-    grid-row: 9 / span 1;
-}
-
-#l2-3 {
-    grid-row: 10 / span 1;
-}
-
-#l2-4 {
-    grid-row: 11 / span 1;
-}
-/* end skills */
-
 
 /* Contact page */
 
@@ -390,7 +336,7 @@ label {
     margin-left: 10px;
 }
 
-#name, #email, textarea, #submit {
+#name, #email, #submit {
     font-family: 'Montserrat', sans-serif;
     /* width: 15em; */
 }
@@ -425,6 +371,7 @@ textarea{
     height: 35vh;
     padding: 12px 20px;
     margin: 8px 0;
+    font-family: 'Montserrat', sans-serif;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -432,6 +379,7 @@ textarea{
 
 input[type=submit] {
     background-color: #5da2d5;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     padding: 14px 20px;
     margin: auto; /* center ?? */
@@ -577,41 +525,15 @@ input[type=submit]:hover {
     }
     /* end jobs */
 
+    /* skills */
     .skills-container {
         display: grid;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: repeat(5, 2em);
-        align-self: start;
-        justify-content: center;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: auto;
     }
     
     #title1 {
         grid-row: 1 / span 1;
-        grid-column: 1 / span 1;
-    }
-    
-    #l1-1 {
-        grid-row: 2 / span 1;
-        grid-column: 1 / span 1;
-    }
-    
-    #l1-2 {
-        grid-row: 3 / span 1;
-        grid-column: 1 / span 1;
-    }
-    
-    #l1-3 {
-        grid-row: 4 / span 1;
-        grid-column: 1 / span 1;
-    }
-    
-    #l1-4 {
-        grid-row: 5 / span 1;
-        grid-column: 1 / span 1;
-    }
-    
-    #l1-5 {
-        grid-row: 6 / span 1;
         grid-column: 1 / span 1;
     }
     
@@ -620,25 +542,17 @@ input[type=submit]:hover {
         grid-column: 2 / span 1;
     }
     
-    #l2-1 {
+    .analytical-skills {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+    
+    }
+    
+    .behav-skills {
         grid-row: 2 / span 1;
         grid-column: 2 / span 1;
     }
-    
-    #l2-2 {
-        grid-row: 3 / span 1;
-        grid-column: 2 / span 1;
-    }
-    
-    #l2-3 {
-        grid-row: 4 / span 1;
-        grid-column: 2 / span 1;
-    }
-    
-    #l2-4 {
-        grid-row: 5 / span 1;
-        grid-column: 2 / span 1;
-    }
+    /* end skills */
     
 
 }
