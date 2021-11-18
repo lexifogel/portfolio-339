@@ -16,6 +16,9 @@
   </head>
 
   <body class="background-color">
+
+    <a class = "skip" href="#content1">Skip to Main Content</a>
+
     <header>
         <nav class="background-color">
             <div id="mySidebar" class="sidebar">
@@ -36,10 +39,11 @@
 
     <main>
 
-        <div class="container">
+        <div class="container" id="content1">
             <h1>Hi, I'm Lexi!</h1>
 
-            <div class="flipcard" ontouchstart="this.classList.toggle('hover')">
+            <div class="flipcard" tabindex="0">
+              <!-- ??? ^^ when you click it, just flips the picture over...-->
               <div class="flipcard-inner">
                 <div class="flipcard-front">
                   <img class="selfie" src="images/lex-kate-selfie.jpg" alt="selfie" />
@@ -51,7 +55,9 @@
             </div>
 
             <h2>I am a current junior studying Data Science with a concentration in UX Design at the University of Michigan's School of Information. </h2>
-            <h3>I'm passionate about designing technology that is accessible to everyone with the intent to improve our everyday lives.</h3>
+            <p>I am also minoring in Economics through the School of Literature, Science, and the Arts.</p>
+            <p>I'm passionate about utilizing data analysis to improve and advance society.
+            I also care about designing accessible technology that may assist in our everyday lives.</p>
         </div>
 
         <!-- "analysis can be used to make informed decisions, bring people together, and advance society" -->

@@ -85,6 +85,35 @@ a.connect:visited {
     color: #FFF; /* change visited color ?? */
 }
 
+.container p {
+    margin: .75em auto;
+}
+
+/* skip to main content */
+/* stolen from hw 5 ! */
+.skip a {
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  
+    /* Requirement 3a code here*/
+    position: absolute;
+    top: -40px;
+}   
+
+/* Requirement 3b code here*/
+.skip a:focus {
+    position: static;
+    top: 0px;
+    visibility: visible;
+}
+/* FIX THESE ^^ !! */
+
+/* end skip */
+
 
 /* flip card */
 /* entire container, keeps perspective */
@@ -129,6 +158,8 @@ a.connect:visited {
 .flipcard-back {
 	transform: rotateY(180deg);
     text-align: center;
+    color: #215583; /* can't see text?? */
+    background-color: #eefbfb;
     vertical-align: middle; /* doesn't work */
 }
 /* end flipcard */ 
@@ -146,7 +177,7 @@ nav {
 /* Links inside the navbar */
 nav a {
     font-size: 16px;
-    color: eefbfb;
+    color: #eefbfb;
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -236,7 +267,7 @@ footer {
 
 .container h2{
     margin-top: .5em;
-    margin-bottom: 2em;
+    margin-bottom: 1.25em;
 }
 
 /* About page */
@@ -300,16 +331,30 @@ footer {
 }
 
 #TMD-logo {
-    width: 40%;
-    min-height: 1.5em;
-    margin-left: .5em;
-    margin-bottom: 1em;
+    height: 1.5em;
+    /* margin-left: .5em;
+    margin-bottom: 1em; */
+    display: block;
+    margin: auto;
+    padding-bottom: 1em;
 }
 
 #playa-logo {
     height: 5em;
-    margin-left: .5em;
-    margin-bottom: 1em;
+    /* margin-left: .5em;
+    margin-bottom: 1em; */
+    display: block;
+    margin: auto;
+    padding-bottom: 1em;
+}
+
+#echo-logo {
+    height: 5em;
+    /* margin-left: .5em;
+    margin-bottom: 1em; */
+    display: block;
+    margin: auto;
+    padding-bottom: 1em;
 }
 
 #title1 {
@@ -510,7 +555,7 @@ input[type=submit]:hover {
     #playa-logo {
         grid-column: 2 / span 1;
         grid-row: 4 / span 1;
-        text-align: right;
+        justify-self: end;
     }
 
     #echo-title {
@@ -522,6 +567,13 @@ input[type=submit]:hover {
     #echo-des {
         grid-column: 1 / span 1;
         grid-row: 6 / span 1;
+    }
+
+    #echo-logo {
+        grid-column: 2 / span 1;
+        grid-row: 6 / span 1;
+        justify-self: end;
+        height: 45%;
     }
     /* end jobs */
 
