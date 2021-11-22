@@ -91,8 +91,7 @@ a.connect:visited {
 
 /* skip to main content */
 /* stolen from hw 5 ! */
-.skip a {
-    background: white;
+a.skip {
     left: 0;
     padding: 6px;
     -webkit-transition: top 1s ease-out;
@@ -105,7 +104,7 @@ a.connect:visited {
 }   
 
 /* Requirement 3b code here*/
-.skip a:focus {
+a.skip:focus {
     position: static;
     top: 0px;
     visibility: visible;
@@ -158,8 +157,11 @@ a.connect:visited {
 .flipcard-back {
 	transform: rotateY(180deg);
     text-align: center;
-    color: #215583; /* can't see text?? */
     background-color: #eefbfb;
+}
+
+.flipcard-back p {
+    color: #215583;
     vertical-align: middle; /* doesn't work */
 }
 /* end flipcard */ 
@@ -177,7 +179,6 @@ nav {
 /* Links inside the navbar */
 nav a {
     font-size: 16px;
-    color: #eefbfb;
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -185,65 +186,19 @@ nav a {
 nav li {
     display: inline;
 }
-
-nav a {
-    color: #5da2d5;
-    text-decoration: none;
-}
 /* end nav */
 
-
-/* Sidebar */
-
-/* current page */
-nav a.current { 
+a.current {
     text-transform: uppercase;
-    /* content: " ✩";  ---- needs  :after  ! */
 }
 
-/* The sidebar menu */
-.sidebar {
-    height: 100%;
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    right: 0; /* this is what put the sidebar on the right!! */
-    background-color: #eefbfb;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+
+/* */
+button.navbar-toggler, span.navbar-toggler-icon, #navbarCollapse {
+    color: white; /* none of these work :/ */
 }
-  
-  /* The sidebar links */
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #215583;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  /* The button used to open the sidebar */
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-  }
-/* end sidebar  */
+
+/* */
 
 
 /* fixed pic issue vv */
@@ -332,11 +287,10 @@ footer {
 
 #TMD-logo {
     height: 1.5em;
-    /* margin-left: .5em;
-    margin-bottom: 1em; */
     display: block;
     margin: auto;
     padding-bottom: 1em;
+    /* why is the top of this image cut off ?? */
 }
 
 #playa-logo {
@@ -423,9 +377,9 @@ textarea{
 }
 
 input[type=submit] {
-    background-color: #5da2d5;
+    background-color: #eefbfb;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: #215583;
     padding: 14px 20px;
     margin: auto; /* center ?? */
     border: none;
@@ -449,14 +403,8 @@ input[type=submit]:hover {
     } */
 
     nav {
-        text-align: right;
-        /* how do i get the X in the sidebar back to the right? */
-        /* honeslty would like to get rid of the sidebar here and have the nav expand if poss */
+        text-align: right; /* doesn't work */
     }
-
-    .sidebar a {
-       padding-right: 1.5em;
-    } 
 
 
     /* About page */

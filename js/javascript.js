@@ -11,8 +11,24 @@ function closeNav() {
   document.querySelector("#mySidebar").style.width = "0";
   document.querySelector("#main").style.marginLeft = "0";
 }
-
 /* end sidebar */
+
+
+/* new nav */
+document.addEventListener("DOMContentLoaded", function(){
+  var btn = document.getElementById("myBtn");
+  var element = document.getElementById("myDropdown");
+
+  // Create a dropdown instance
+  var myDropdown = new bootstrap.Dropdown(element);
+
+  btn.addEventListener("click", function(){
+      myDropdown.toggle();
+  });
+});
+/* end new nav*/
+
+
 
 
 
