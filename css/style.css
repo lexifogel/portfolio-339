@@ -27,8 +27,56 @@ h1 {
 
     margin-bottom: .5em;
     margin-top: .5em;
-    text-shadow: .03em .05em #5da2d5;
+    /* text-shadow: .03em .05em #5da2d5; */
+
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6);
 }
+
+/* playful */
+@keyframes scatter {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: -10px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+ 
+.playful span {
+  position: relative;
+  color: #5362F6;
+  text-shadow: .03em .05em #E485F8;
+  animation: scatter 1.75s infinite;
+  line-height: 1.5;
+}
+
+.playful span:nth-child(2n) {
+  color: #ED625C;
+  text-shadow: .03em .05em #F2A063;
+  animation-delay: 0.3s;
+}
+
+.playful span:nth-child(3n) {
+  color: #FFD913;
+  text-shadow: .03em .05em #6EC0A9;
+  animation-delay: 0.15s;
+}
+
+.playful span:nth-child(5n) {
+  color: #555BFF;
+  text-shadow: .03em .05em #E485F8;
+  animation-delay: 0.4s;
+}
+
+.playful span:nth-child(7n), .playful span:nth-child(11n) {
+  color: #FF9C55;
+  text-shadow: .03em .05em #FF5555;
+  animation-delay: 0.25s;
+}
+/* end playful */
 
 h2 {
     font-size: 1.5em;
@@ -561,3 +609,7 @@ input[type=submit]:hover {
     
 
 }
+
+/* @media screen and (prefers-reduced-motion: reduce) {
+    animation: none;
+} */
