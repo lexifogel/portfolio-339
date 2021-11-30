@@ -1,13 +1,15 @@
-html{
+html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
-body{
+body {
     background-color: #215583; /* #5da2d5; */
     /* font-size: 18px; */
     font-family: 'Montserrat', sans-serif;
     margin: 3em;
     padding: 0;
+    height: 100%;
 }
 
 .background-color {
@@ -372,15 +374,26 @@ label {
     display: none;
 }
 
-.form {
+form {
     display: flex;
-    margin: 0 auto;
-    border-radius: 4px;
-    align-items: center;
-    /* flex-basis: 1em; */
-    /* flex-grow: 4; */
+    /* flex-basis: 1em;
+    flex-grow: 4; */
     margin-left: 10px;
 }
+
+.form-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-inline input {
+    margin: 10px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
 
 #name, #email, #submit {
     font-family: 'Montserrat', sans-serif;
@@ -397,6 +410,7 @@ legend {
     color: #eefbfb;
     font-weight: normal;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1em;
 }
 
 label { /* from accessible-forms CSS */
@@ -411,6 +425,11 @@ input[type=text], input[type=email] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
+/* .personal-info {
+    display: inline-block;
+    width: 45%;
+} */
 
 textarea{
     width: 100%;
@@ -428,8 +447,6 @@ input[type=submit] {
     font-family: 'Montserrat', sans-serif;
     color: #215583;
     padding: 14px 20px;
-    margin: auto; /* center ?? */
-    border: none;
     cursor: pointer;
     width: 25%;
 }
@@ -437,6 +454,37 @@ input[type=submit] {
 input[type=submit]:hover {
     opacity: 0.9;
 }
+
+/* parallax */
+.parallax {
+    margin-top: 4em;
+    margin-bottom: 14em;
+
+    font-size: 3em;
+    color: #fff;
+
+    /* The image used */
+    background-image: url("../images/thxgiv.jpg");
+    
+    min-height: 15em;
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Parallax image text */
+span.text {
+
+    /* these 4 aren't working ? */
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 4em;
+    vertical-align: middle;
+}
+/* end parallax */
 
 /* from HW 6 vvv  -- want to expand nav */
 /* (no buttons) on tablet / desktop views */
@@ -607,9 +655,19 @@ input[type=submit]:hover {
     }
     /* end skills */
     
-
 }
 
-/* @media screen and (prefers-reduced-motion: reduce) {
-    animation: none;
-} */
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .playful span {
+      animation: none;
+    } 
+}
+
+/* Turn off parallax scrolling for all tablets and phones */
+/* is this the right media query? and action ? HELP */
+@media only screen and (max-device-width: 992px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+  }

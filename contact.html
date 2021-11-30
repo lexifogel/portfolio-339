@@ -19,6 +19,16 @@
 
     <script src="https://use.fontawesome.com/f9c76c7132.js"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6T33X1HHSP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6T33X1HHSP');
+    </script>
+
   </head>
 
   <body>
@@ -67,15 +77,14 @@
       <br><br>    
       
       <!-- <h2>Or leave a message:</h2><br> -->
-            <form>
-              <form action="https://formspree.io/f/xgerbpre" method="POST">
+            <form class="form-inline" action="https://formspree.io/f/xgerbpre" method="POST">
                   <fieldset>  <!-- name is key, input is value -->
                       <legend>Or leave a message:</legend>  <!-- style this-->
                       <label for="name">Name</label>
-                      <input type="text" placeholder="Name" id="name" name="name" required>
+                      <input type="text" placeholder="Name" id="name" name="name" class="personal-info" required>
                       <br>
                       <label for="email">Email</label>
-                      <input type="email" placeholder="Email" id="email" name="email" required>
+                      <input type="email" placeholder="Email" id="email" name="email" class="personal-info" required>
                       <br><br>
                       <!-- <label for="date">Date</label>
                       <input id="date" type="date" placeholder="Date" name="date">
@@ -88,7 +97,9 @@
                   </fieldset>
               </form>
 
-      <br><br><br>
+      <div class="parallax">  
+        <span class="text">Thanks for visiting my site!</span>  
+      </div>
 
     </main>
 
