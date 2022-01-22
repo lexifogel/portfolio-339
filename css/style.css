@@ -4,46 +4,43 @@ html {
 }
 
 body {
-    background-color: #215583; /* #5da2d5; */
-    /* font-size: 18px; */
+    background-color: #fff; 
+    /* #215583, #5da2d5; */
     font-family: 'Montserrat', sans-serif;
     margin: 3em;
     padding: 0;
     height: 100%;
+    color: #215583;
 }
 
 .background-color {
     background: linear-gradient(#5da2d5,#215583);
+    color: #fff;
 }
 
-/* .background-color2 {
-    background: linear-gradient(120deg, #215583, #5da2d5);
-} */
+nav {
+    display: flex;
+    flex-direction: column;
 
-/* skip to main content */
-/* stolen from hw 5 ! */
-a.skip {
-    left: 0;
-    padding: 6px;
-    -webkit-transition: top 1s ease-out;
-    transition: top 1s ease-out;
-    z-index: 1;
-    position: absolute;
-    top: -40px;
-}   
-
-a.skip:focus {
-    position: static;
-    top: 0px;
-    visibility: visible;
+    /* background-color: #5da2d5; */
+    width: 100%;
+    text-align: right;
 }
-/* end skip */
+
+nav a {
+    padding: .5em;
+    -webkit-text-stroke: .3px #5da2d5;
+}
+
+.background-color nav a {
+    color: #eefbfb;
+}
 
 
 /* standard formatting -- all pages */
 h1 {
     font-size: 3.25em;
-    color: #eefbfb;
+    /* color: #eefbfb; */
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 
@@ -54,9 +51,12 @@ h1 {
     /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6); */
 }
 
+
+/* #eefbfb */
+
 h2 {
     font-size: 1.5em;
-    color: #eefbfb;
+    /* color: #eefbfb; */
     font-weight: normal;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: .5em;
@@ -64,7 +64,7 @@ h2 {
 
 h3 {
     font-size: 1em;
-    color: #eefbfb;
+    /* color: #eefbfb; */
     line-height: 1.15;
     font-weight: bold;
     margin-bottom: 1em;
@@ -72,14 +72,14 @@ h3 {
 
 h4 {
     /* font-size: 16px; */
-    color: #FFF;
+    /* color: #FFF; */
     font-weight: bold;
     line-height: 1.15;
     margin: .5em;
 }
 
 p {
-    color: #eefbfb;
+    /* color: #eefbfb; */
     font-family: 'Montserrat', sans-serif;
     line-height: 1.15;
     margin: .5em;
@@ -88,7 +88,7 @@ p {
 
 ul, li {
     line-height: 1.35;
-    color: #eefbfb;
+    /* color: #eefbfb; */
     margin-left: 1em;
 }
 
@@ -101,17 +101,17 @@ ul, li {
 }
 
 a {
-    color: #eefbfb !important;
-    text-decoration: none !important;
+    /* color: #eefbfb; */
+    text-decoration: none;
 }
 
 a:hover {
-    color: #FFF !important;
+    color: #215583;
 }
 
 a:visited {
     text-decoration: none;
-    color: #c812ed; /* change visited color */
+    color: #5da2d5; /* TBD if i keep this .... */
 }
 
 
@@ -131,7 +131,7 @@ footer {
 
     text-align: center;
     /* stick to bottom! ? !!!! */
-    color: #eefbfb;
+    color: #215583; /* eefbfb */
     font-size: .75em;
 }
 /* end standard formatting -- all pages */
@@ -176,46 +176,11 @@ h1.funky {
     100% { transform: rotate( 0.0deg) }
   }
   
-
-
-
-/* dropdown -- mobile only */
-nav {
-    display: none;
-}
-
 .dropdown {
-  position: relative;
-  display: inline-block;
-}
+    display: none;
+  }
 
-.dropbtn {
-    background-color: transparent;
-    color: white;
-    padding: 1em;
-    font-size: 1.5em;
-    border: none;
-}
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  padding: 1em 1em;
-  z-index: 1;
-  background-color: #5da2d5;
-  border-radius: .3em;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-padding: .5em 0;
-display: block;
-}
-/* end dropdown -- mobile only */
 
 
 /* Home page */ 
@@ -302,8 +267,15 @@ h3.activities  {
     margin: 2em;
 }
 
+#IA-logo, #FEAST-logo {
+    height: 5em;
+    display: block;
+    margin: auto;
+    padding-bottom: 1em;
+}
+
 #TMD-logo {
-    height: 2.5em;
+    height: 4em;
     display: block;
     margin: auto;
     padding-bottom: 1em;
@@ -311,7 +283,7 @@ h3.activities  {
 }
 
 #playa-logo {
-    height: 5em;
+    height: 4em;
     /* margin-left: .5em;
     margin-bottom: 1em; */
     display: block;
@@ -320,7 +292,7 @@ h3.activities  {
 }
 
 #echo-logo {
-    height: 5em;
+    height: 4em;
     /* margin-left: .5em;
     margin-bottom: 1em; */
     display: block;
@@ -376,7 +348,7 @@ form {
 
 legend {
     font-size: 1.5em;
-    color: #eefbfb;
+    /* color: #eefbfb; */
     font-weight: normal;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 1em;
@@ -434,24 +406,6 @@ input[type=submit]:hover {
 
 /* TABLET view */
 @media screen and (min-width: 760px) {
-
-    .dropdown {
-        display: none;
-      }
-    
-    nav {
-        display: flex;
-        flex-direction: column;
-  
-        /* background-color: #5da2d5; */
-        width: 100%;
-        text-align: right;
-    }
-
-    nav a {
-        padding: .5em;
-        -webkit-text-stroke: .3px #5da2d5;
-    }
 
     /* About page */
 
@@ -517,65 +471,91 @@ input[type=submit]:hover {
         grid-template-rows: auto;
     }
 
-    #TMD-title {
+    #FEAST-title {
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
-        margin-top: .5em;
+        margin-top: 1em;
     }
-
-    #TMD-des {
+    #FEAST-des {
         grid-column: 1 / span 1;
         grid-row: 2 / span 1;
     }
-
-    #TMD-logo {
+    #FEAST-logo {
         grid-column: 2 / span 1;
         grid-row: 2 / span 1;
         object-fit: cover;
     }
 
-    #playa-title {
+    #IA-title {
         grid-column: 1 / span 1;
         grid-row: 3 / span 1;
-        margin-top: .5em;
+        margin-top: 1em;
+    }
+    #IA-des {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
+    #IA-logo {
+        grid-column: 2 / span 1;
+        grid-row: 4 / span 1;
+        justify-self: end;
+    }
+
+    #TMD-title {
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 1;
+        margin-top: 1em;
+    }
+
+    #TMD-des {
+        grid-column: 1 / span 1;
+        grid-row: 6 / span 1;
+    }
+
+    #TMD-logo {
+        grid-column: 2 / span 1;
+        grid-row: 6 / span 1;
+        /* object-fit: cover; */
+
+    }
+
+    #playa-title {
+        grid-column: 1 / span 1;
+        grid-row: 7 / span 1;
+        margin-top: 1em;
     }
 
     #playa-des {
         grid-column: 1 / span 1;
-        grid-row: 4 / span 1;
+        grid-row: 8 / span 1;
     }
 
     #playa-logo {
         grid-column: 2 / span 1;
-        grid-row: 4 / span 1;
-        justify-self: end;
+        grid-row: 8 / span 1;
     }
 
     #echo-title {
         grid-column: 1 / span 1;
-        grid-row: 5 / span 1;
-        margin-top: .5em;
+        grid-row: 9 / span 1;
+        margin-top: 1em;
     }
 
     #echo-des {
         grid-column: 1 / span 1;
-        grid-row: 6 / span 1;
+        grid-row: 10 / span 1;
     }
 
     #echo-logo {
         grid-column: 2 / span 1;
-        grid-row: 6 / span 1;
-        justify-self: end;
-        height: 45%;
-        position: relative; 
-        top: -3.5em;
+        grid-row: 10 / span 1;
     }
     /* end jobs */
 
     /* skills */
 
     .skills h2 {
-        margin-top: -4em;
+        margin-top: 2em;
     }
 
     .skills-container {
@@ -697,60 +677,87 @@ input[type=submit]:hover {
         display: grid;
         grid-template-columns: 20% 40% 40%;
         grid-template-rows: auto;
+        row-gap: 1em;
     }
 
-    #TMD-title {
+    #FEAST-title {
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
-        margin-top: .5em;
+        margin-top: 1em;
     }
 
-    #TMD-des {
+    #FEAST-des {
         grid-column: 2 / span 1;
         grid-row: 1 / span 1;
     }
 
-    #TMD-logo {
+    #FEAST-logo {
         grid-column: 3 / span 1;
         grid-row: 1 / span 1;
         object-fit: cover;
     }
 
-    #playa-title {
+    #IA-title {
         grid-column: 1 / span 1;
         grid-row: 2 / span 1;
-        margin-top: .5em;
+        margin-top: 1em;
+    }
+
+    #IA-des {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    #IA-logo {
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+        justify-self: end;
+    }
+
+    #TMD-title {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        margin-top: 1em;
+    }
+
+    #TMD-des {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    #TMD-logo {
+        grid-column: 3 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    #playa-title {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
     }
 
     #playa-des {
         grid-column: 2 / span 1;
-        grid-row: 2 / span 1;
+        grid-row: 4 / span 1;
     }
 
     #playa-logo {
         grid-column: 3 / span 1;
-        grid-row: 2 / span 1;
-        justify-self: end;
+        grid-row: 4 / span 1;
     }
 
     #echo-title {
         grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
-        margin-top: .5em;
+        grid-row: 5 / span 1;
     }
 
     #echo-des {
         grid-column: 2 / span 1;
-        grid-row: 3 / span 1;
+        grid-row: 5 / span 1;
     }
 
     #echo-logo {
         grid-column: 3 / span 1;
-        grid-row: 3 / span 1;
-        justify-self: end;
-        height: 45%;
-        position: relative; 
-        top: -3.5em;
+        grid-row: 5 / span 1;
     }
     /* end jobs */
     
