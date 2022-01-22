@@ -28,11 +28,13 @@
   </head>
 
   <body class="background-color">
+    <div id="page-container">
+      <div id="content-wrap">
 
     <header>
 
         <nav>
-          <a href = "index.html" class="current">Home</a>
+          <a href = "index.html">Home</a>
           <a href = "about.html">About</a>
           <a href = "work.html">Work</a>
           <a href = "contact.html">Contact</a>
@@ -41,41 +43,14 @@
         <div class="dropdown">
           <button class="dropbtn">≡</button>
           <div class="dropdown-content">
-            <a href = "index.html" class="current">Home</a>
+            <a href = "index.html">Home</a>
             <a href = "about.html">About</a>
             <a href = "work.html">Work</a>
             <a href = "contact.html">Contact</a>
           </div>
         </div>
 
-        
-
-
-        <!-- bootstrap nav that matches js -->
-        <!-- <nav class="navbar navbar-expand-sm">
-          <div class="container-fluid">
-              <button type="button" class="fa fa-bars navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                !<span class="navbar-toggler-icon"></span>
-               </button>
-              <div id="navbarCollapse" class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav">
-                      <li class="nav-item">
-                          <a href = "index.html" class="nav-link current">Home</a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="about.html" class="nav-link">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="work.html" class="nav-link">Work</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="contact.html" class="nav-link">Contact</a>
-                  </li>
-                  </ul>
-              </div>
-          </div>
-      </nav> -->
-    <!-- end bootstrap nav -->
+    
 
     </header>       
 
@@ -83,46 +58,8 @@
 
         <div class="container">
 
-            <h1 class="funky">Hi, I'm Lexi!</h1>
-
-            <div class="flipcard" tabindex="0">
-              <!-- ??? ^^ when you click it on mobile, just flips the picture over...-->
-              <div class="flipcard-inner">
-                <div class="flipcard-front">
-                  <img class="selfie" src="images/lex-kate-selfie.jpg" alt="selfie" />
-                </div>
-                <div class="flipcard-back">
-                  <!-- <p>Welcome to my portfolio!</p> -->
-                  <p class="playful"> <!-- aria-label="Welcome to my portfolio!"-->
-                    <span aria-hidden="true">W</span>
-                    <span aria-hidden="true">e</span>
-                    <span aria-hidden="true">l</span>
-                    <span aria-hidden="true">c</span>
-                    <span aria-hidden="true">o</span>
-                    <span aria-hidden="true">m</span>
-                    <span aria-hidden="true">e</span><br>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true">t</span>
-                    <span aria-hidden="true">o</span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true">m</span>
-                    <span aria-hidden="true">y</span><br>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true">p</span>
-                    <span aria-hidden="true">o</span>
-                    <span aria-hidden="true">r</span>
-                    <span aria-hidden="true">t</span>
-                    <span aria-hidden="true">f</span>
-                    <span aria-hidden="true">o</span>
-                    <span aria-hidden="true">l</span>
-                    <span aria-hidden="true">i</span>
-                    <span aria-hidden="true">o</span>
-                    <span aria-hidden="true">!</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
+            <h1 class="funky">Hi, I'm Lexi!<span class="wave"> 👋</span></h1>
+   
             <h2>I am a current junior studying Data Science with a concentration in UX Design at the University of Michigan's School of Information. </h2>
             <p>I am also minoring in Economics through the School of Literature, Science, and the Arts.</p>
             <p>I'm passionate about utilizing data analysis to improve and advance society.
@@ -135,13 +72,15 @@
 
     </main>
 
- 
-    <footer>
-        <p>Lexi Fogel &copy; 2021</p>
+    </div>
+
+    <footer id="footer">
+        <p>Lexi Fogel &copy; 2022</p>
 	</footer>
 
-   <script src="js/javascript.js"></script>
 
+   <script src="js/javascript.js"></script>
+  </div>
   </body>
   
   </html>
